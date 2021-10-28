@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppS2PrlB_Deber.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Ingreso de Notas!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Grid RowSpacing="30" ColumnSpacing="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" x:Name="lblUsuario"/>
+
+            <Label Grid.Row="1" Grid.Column="0" Text="Nota 1" FontSize="20" />
+            <Label Grid.Row="1" Grid.Column="1" Text="Nota 2" FontSize="20"/>
+
+            <Entry Grid.Row="2" Grid.Column="0" x:Name="txtSeguimiento1" Placeholder="Nota de seguimiento" Keyboard="Numeric" />
+            <Entry Grid.Row="3" Grid.Column="0" x:Name="txtExamen1" Placeholder="Nota de examen" Keyboard="Numeric" />
+            <Entry Grid.Row="4" Grid.Column="0" x:Name="txtParcial1" Placeholder="Nota de Parcial" Keyboard="Numeric" IsReadOnly="True"/>
+
+            <Entry Grid.Row="2" Grid.Column="1" x:Name="txtSeguimiento2" Placeholder="Nota de seguimiento" Keyboard="Numeric" />
+            <Entry Grid.Row="3" Grid.Column="1" x:Name="txtExamen2" Placeholder="Nota de examen" Keyboard="Numeric" />
+            <Entry Grid.Row="4" Grid.Column="1" x:Name="txtParcial2" Placeholder="Nota de Parcial" Keyboard="Numeric" IsReadOnly="True" />
+
+        </Grid>
+        <Button x:Name="btnCalcula" Text="Calcular" Clicked="btnCalcula_Clicked" />
+    </StackLayout>
+
+</ContentPage>
